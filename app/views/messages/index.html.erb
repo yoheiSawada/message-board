@@ -1,5 +1,5 @@
 <div class= "form-group">
-<div class="panel panel-default">
+  <div class="panel panel-default">
     <div class="panel-heading">
         メッセージ一覧
     </div>
@@ -12,20 +12,28 @@
          <% end %>
         
     </div>
-</div>
+  </div>
 
-<%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
-<label for="message_name" class="control-label col-md-1">名前:</label>
-　<div class="col-md-11">
-　<%= f.text_field :name, :class => "form-control" %>
+    <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-group">
+    <label for="message_name" class="control-label col-md-1">名前:</label>
+      <div class="col-md-11">
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
   </div>
   
-<label for="message_name" class="control-label col-md-1">内容:</label>
-<div class="col-md-11">
-　<%= f.text_area :body, :class =>"form-control", :size=>"50x10" %>
-</div>
-<div class="col-md-2 col-md-offset-10">
-　<%= f.submit class: "btn btn-sm btn-success btn-lg" %>
-</div>
-<% end %>
-</div>
+  <div class="form-group">
+    <label for="message_name" class="control-label col-md-1">内容:</label>
+      <div class="col-md-11">
+        <%= f.text_area :body, :class =>"form-control", :size=>"50x10" %>
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-md-1 col-md-offset-11">
+     <%= f.submit class: "btn btn-sm btn-success btn-lg" %>
+    
+     <% end %>
+    </div>
+  </div>
+
