@@ -4,6 +4,9 @@ validates :name ,length: { maximum: 20 } ,presence: true
 #検証している。　名前の長さが最大20で　存在していれば　true
 validates :body ,length: { minimum: 2, maximum: 30 } ,presence: true
 #検証している。　内容（body）の長さが２から３０で　存在していれば　true
+
+validates :age ,numericality: { only_integer: true , greater_than_or_equal_to: 0 } 
+
 end
 
 #バリデーションとはモデルオブジェクトをデータベースに保存する前に、そのデータが正しいかどうかを検証する仕組みです。
